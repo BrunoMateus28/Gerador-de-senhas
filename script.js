@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const generatePasswordButton = document.getElementById('generate-password');
     const copyToClipboardButton = document.getElementById('copy-to-clipboard');
-    const passwordDisplay = document.getElementById('result');
+    const passwordDisplay = document.getElementById('password-display');
   
     generatePasswordButton.addEventListener('click', function() {
       const length = document.getElementById('password-length').value;
@@ -27,18 +27,18 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function generatePassword(length, includeUppercase, includeLowercase, includeNumbers, includeSymbols) {
         let result = '';
-        const characters = '';
+        let characters = '';
         if (includeLowercase) {
-            characters+='abcdefghijklmnopqrstuvwxyz';
+            characters += 'abcdefghijklmnopqrstuvwxyz';
         }
         if (includeUppercase) {
-            characters+='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         }
         if (includeNumbers) {
-            characters+='0123456789';
+            characters += '0123456789';
         }
         if (includeSymbols) {
-            characters+='!@#$%^&*()_+-=[]{}|;:,.<>?';
+            characters +='!@#$%^&*()_+-=[]{}|;:,.<>?';
         }
         const charactersLength = characters.length;
         let counter = 0;
@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
           result += characters.charAt(Math.floor(Math.random() * charactersLength));
           counter += 1;
         }
+        console.log(result);
         return result;
     }
   });
