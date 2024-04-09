@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const password = passwordDisplay.textContent;
       if (password) {
         navigator.clipboard.writeText(password).then(function() {
-          alert('Password copied to clipboard!');
+          alert('Senha copiada para a área de transferência!');
         }, function() {
-          alert('Failed to copy password to clipboard!');
+          alert('Falha ao copiar a senha para a área de transferência!');
         });
       }
     });
@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
           result += characters.charAt(Math.floor(Math.random() * charactersLength));
           counter += 1;
         }
-        console.log(result);
         return result;
     }
   });

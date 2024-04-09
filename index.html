@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password Generator</title>
+  <title>Gerador de Senhas</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <div class="box">
-      <h1>Password Generator</h1>
+      <h1>Gerador de Senhas</h1>
       <div id="password-display" class="password-display"></div>
       <div class="options-column">
         <div class="option-row">
-          <label for="password-length">Password Length:</label>
+          <label for="password-length">Tamanho:</label>
           <input type="number" id="password-length" min="4" max="50" value="12">
         </div>
         <div class="option-row">
-          <label><input type="checkbox" id="include-uppercase"> Uppercase</label>
+          <label><input type="checkbox" id="include-uppercase"> Maiúsculas</label>
         </div>
         <div class="option-row">
-          <label><input type="checkbox" id="include-lowercase"> Lowercase</label>
+          <label><input type="checkbox" id="include-lowercase"> Minúsculas</label>
         </div>
         <div class="option-row">
-          <label><input type="checkbox" id="include-numbers"> Numbers</label>
+          <label><input type="checkbox" id="include-numbers"> Números</label>
         </div>
         <div class="option-row">
-          <label><input type="checkbox" id="include-symbols"> Symbols</label>
+          <label><input type="checkbox" id="include-symbols"> Símbolos</label>
         </div>
       </div>
       <div class="button-row">
-        <button id="generate-password">Generate Password</button>
-        <button id="copy-to-clipboard">Copy</button>
+        <button id="generate-password">Gerar Senha</button>
+        <button id="copy-to-clipboard">Copiar</button>
       </div>
     </div>
   </div>
